@@ -26,4 +26,11 @@ class FizzBuzzTest extends TestCase
         $resultado = $fizzBuzz->diNumero(15);
         $this->assertEquals('FizzBuzz', $resultado);
     }
+
+    public function testCuandoLeDoyElNroUnoDevuelveUno()
+    {
+        $fizzBuzz = new \App\FizzBuzz();
+        $resultado = $fizzBuzz->diNumero(1);
+        $this->assertEquals('1', $resultado);
+    }
 }
