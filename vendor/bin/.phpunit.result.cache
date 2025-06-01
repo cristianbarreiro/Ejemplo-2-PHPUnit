@@ -1,1 +1,1 @@
-{"version":1,"defects":{"App\\Tests\\FizzBuzzTest::testCuandoLePaso3DevuelveFizz":8},"times":{"App\\Tests\\FizzBuzzTest::testCuandoLePaso3DevuelveFizz":0.01}}
+{"version":1,"defects":{"App\\Tests\\FizzBuzzTest::testCuandoLePaso3DevuelveFizz":8},"times":{"App\\Tests\\FizzBuzzTest::testCuandoLePaso3DevuelveFizz":0.011,"App\\Tests\\FizzBuzzTest::testCuandoLePaso5DevuelveBuzz":0.001,"App\\Tests\\FizzBuzzTest::testCuandoLePaso3y5DevuelveFizzBuzz":0.002}}
