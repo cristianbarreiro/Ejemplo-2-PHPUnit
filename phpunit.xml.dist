@@ -29,4 +29,9 @@
             <directory>src/Migration</directory>
         </exclude>
     </source>
+
+
+    <php>
+        <env name="APP_HOST" value="prueba.com"/>
+    </php>
 </phpunit>
