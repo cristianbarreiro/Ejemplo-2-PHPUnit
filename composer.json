@@ -1,4 +1,11 @@
 {
+  "name": "root/project",
+  "authors": [
+    {
+      "name": "Cristian Barreiro",
+      "email": "cristianbarreirofag@gmail.com"
+    }
+  ],
   "require-dev": {
     "phpunit/phpunit": "^12.1"
   },

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-feature/dataprovider-test',
+        'version' => 'dev-feature/dataprovider-test',
+        'reference' => 'db89a811f9a333f3541e9c403cad590f718e542f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-feature/dataprovider-test',
+            'version' => 'dev-feature/dataprovider-test',
+            'reference' => 'db89a811f9a333f3541e9c403cad590f718e542f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
