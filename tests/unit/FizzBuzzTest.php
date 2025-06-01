@@ -4,7 +4,7 @@ namespace App\Tests;
 
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\Attributes\CoversClass; 
+use PHPUnit\Framework\Attributes\CoversClass;
 use App\FizzBuzz;
 
 #[CoversClass(FizzBuzz::class)] // Indicamos que este test cubre la clase FizzBuzz
@@ -26,5 +26,11 @@ class FizzBuzzTest extends TestCase
         $fizzBuzz = new FizzBuzz();
         $resultado = $fizzBuzz->diNumero($numeroATestear);
         $this->assertEquals($resultadoEsperado, $resultado);
+    }
+
+    public function testLaCuentaEsCeroSiNadieHaDichoNada()
+    {
+        $fizzBuzz = new FizzBuzz();
+        $this->assertEquals(0, $fizzBuzz->dimeLaCuenta());
     }
 }
