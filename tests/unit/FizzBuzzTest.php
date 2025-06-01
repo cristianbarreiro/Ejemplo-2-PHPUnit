@@ -33,4 +33,17 @@ class FizzBuzzTest extends TestCase
         $fizzBuzz = new FizzBuzz();
         $this->assertEquals(0, $fizzBuzz->dimeLaCuenta());
     }
+
+    public function testLaCuentaSeIncrementaCuandoDecimosNumero()
+    {
+        $fizzBuzz = new FizzBuzz();
+        $fizzBuzz->diNumero(1);
+        // $this->assertEquals(1, $fizzBuzz->dimeLaCuenta());
+
+        $fizzBuzz->diNumero(2);
+        $this->assertEquals(2, $fizzBuzz->dimeLaCuenta());
+
+        // $fizzBuzz->diNumero(3);
+        // $this->assertEquals(3, $fizzBuzz->dimeLaCuenta());
+    }
 }
