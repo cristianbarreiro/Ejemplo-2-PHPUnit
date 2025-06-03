@@ -11,17 +11,24 @@ class QueRopaOfertar
         $this->api = $api;
     }
 
-    public function determina(string $city)
+    public function determina(string $ciudad): string
     {
-        $temperatura = $this->api->queTemperaturaHaceEn($city);
-        $categoria = 'Camisas';
-
-        if ($temperatura > 18) {
-            $categoria = 'Camisetas';
-        } elseif ($temperatura < 10) {
-            $categoria = 'Abrigos';
+        try {
+            $temp = $this->api->queTemperaturaHaceEn($ciudad);
+        } catch (\Exception $e) {
+            return 'Datos insuficientes';
         }
 
-        return $categoria;
+        if (is_nan($temp)) {
+            return 'Datos insuficientes';
+        }
+
+        if ($temp > 18) {
+            return 'Camisetas';
+        } elseif ($temp >= 10) {
+            return 'Camisas';
+        } else {
+            return 'Abrigos';
+        }
     }
 }
