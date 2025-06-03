@@ -1,11 +1,22 @@
 {
   "name": "root/project",
+  "description": "Consulta del clima con OpenWeatherMap",
   "authors": [
     {
       "name": "Cristian Barreiro",
       "email": "cristianbarreirofag@gmail.com"
     }
   ],
+  "require": {
+    "cmfcmf/openweathermap-php-api": "^3.3",
+    "php-http/message": "^1.16",
+    "php-http/guzzle6-adapter": "^2.0",
+    "php-http/message-factory": "^1.1",
+    "php-http/discovery": "^1.20",
+    "nyholm/psr7": "^1.8",
+    "php-http/httplug": "^2.4",
+    "nyholm/psr7-server": "^1.1"
+  },
   "require-dev": {
     "phpunit/phpunit": "^12.1"
   },
@@ -17,6 +28,13 @@
   "autoload-dev": {
     "psr-4": {
       "Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
     }
   }
 }
