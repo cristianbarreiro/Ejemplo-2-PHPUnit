@@ -3,7 +3,7 @@
         'name' => 'root/project',
         'pretty_version' => 'dev-feature/mocks',
         'version' => 'dev-feature/mocks',
-        'reference' => 'f25793c32518591c7289471b998ce54195f3d78d',
+        'reference' => 'de26f341e22d46925c4529007b1829cec617d2e9',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -306,7 +306,7 @@
         'root/project' => array(
             'pretty_version' => 'dev-feature/mocks',
             'version' => 'dev-feature/mocks',
-            'reference' => 'f25793c32518591c7289471b998ce54195f3d78d',
+            'reference' => 'de26f341e22d46925c4529007b1829cec617d2e9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -1,9 +1,11 @@
 <?php
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use App\QueRopaOfertar;
 use App\TiempoApi;
 
+#[CoversClass(QueRopaOfertar::class)]
 class QueRopaOfertarTest extends TestCase
 {
     public function testDeterminaCamisetasCuandoHaceMasDe18Grados()
