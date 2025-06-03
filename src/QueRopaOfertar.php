@@ -13,10 +13,15 @@ class QueRopaOfertar
 
     public function determina(string $ciudad): string
     {
+        if (empty(trim($ciudad))) {
+            throw new \InvalidArgumentException("La ciudad no puede estar vacía");
+        }
+
         try {
             $temperatura = $this->api->queTemperaturaHaceEn($ciudad);
 
-            if ($temperatura === null) {
+            // Chequea si temperatura tiene el valor especial para "sin datos"
+            if ($temperatura === -999.0) {
                 return 'Datos insuficientes';
             }
 

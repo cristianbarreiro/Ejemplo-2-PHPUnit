@@ -80,11 +80,12 @@ class QueRopaOfertarTest extends TestCase
     public function testDeterminaConTemperaturaNula()
     {
         $apiMock = $this->createMock(TiempoApi::class);
-        $apiMock->method('queTemperaturaHaceEn')->willReturn(null);
+        $apiMock->method('queTemperaturaHaceEn')->willReturn(-999.0);
 
         $ropa = new QueRopaOfertar($apiMock);
         $this->assertEquals('Datos insuficientes', $ropa->determina('Madrid'));
     }
+
 
     public function testDeterminaCuandoLaApiLanzaExcepcion()
     {
@@ -93,5 +94,15 @@ class QueRopaOfertarTest extends TestCase
 
         $ropa = new QueRopaOfertar($apiMock);
         $this->assertEquals('Datos insuficientes', $ropa->determina('Madrid'));
+    }
+
+    public function testDeterminaLanzaExcepcionCuandoCiudadVacia()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+
+        $apiMock = $this->createMock(TiempoApi::class);
+        $ropa = new QueRopaOfertar($apiMock);
+
+        $ropa->determina('');
     }
 }
