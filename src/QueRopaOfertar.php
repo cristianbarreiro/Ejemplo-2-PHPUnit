@@ -14,21 +14,21 @@ class QueRopaOfertar
     public function determina(string $ciudad): string
     {
         try {
-            $temp = $this->api->queTemperaturaHaceEn($ciudad);
+            $temperatura = $this->api->queTemperaturaHaceEn($ciudad);
+
+            if ($temperatura === null) {
+                return 'Datos insuficientes';
+            }
+
+            if ($temperatura > 18) {
+                return 'Camisetas';
+            } elseif ($temperatura >= 10 && $temperatura <= 18) {
+                return 'Camisas';
+            } else { // Menor que 10
+                return 'Abrigos';
+            }
         } catch (\Exception $e) {
             return 'Datos insuficientes';
-        }
-
-        if (is_nan($temp)) {
-            return 'Datos insuficientes';
-        }
-
-        if ($temp > 18) {
-            return 'Camisetas';
-        } elseif ($temp >= 10) {
-            return 'Camisas';
-        } else {
-            return 'Abrigos';
         }
     }
 }
